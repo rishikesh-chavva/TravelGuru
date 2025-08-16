@@ -1,0 +1,61 @@
+<% layout("/layouts/boilerplate") -%>
+  <body>
+    <br>
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>Add Your Property to our Listings:</h2><br>
+        <form method="post" action="/listings" class="needs-validation" enctype="multipart/form-data" novalidate>
+          <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="title" class="form-control" type="text" placeholder="Add a catchy title" required></input>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div><br>
+          <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" type="text" required></textarea><br />
+          </div>
+          
+          <div>
+            <label for="image" class="form-label" >Upload Image</label>
+            <input name="image" class="form-control" type="file" placeholder="Upload Image"></input><br />
+          </div>
+          <div>
+            <label for="location" class="form-label" >Location</label>
+            <input name="location" class="form-control" type="text" required></input>
+            <div class="invalid-feedback">
+                Please enter a valid Location
+            </div><br>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div>
+                <label for="country" class="form-label">Country</label>
+                <input name="country" class="form-control" type="text" value="India" required></input>
+                <div class="invalid-feedback">
+                  Country must be valid
+                </div><br />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div>
+                <label for="price" class="form-label">Price</label>
+                <input name="price" class="form-control" type="number" value="1000" required></input>
+                <div class="invalid-feedback">
+                Please enter a valid price
+                </div><br />
+              </div>
+            </div>
+          </div>
+          
+          
+          <button type="submit" class="btn btn-dark">Add Property</button>
+          <br>
+        </form>
+      </div>
+    </div>
+    
+    <br>
+  </body>
+
